@@ -1,0 +1,10 @@
+extend ../templates/layout
+
+block content
+	div(id='game')
+
+block scripts
+	script(type="text/javascript" src="/socket.io/socket.io.js")
+	script(type='text/javascript').
+		var socket = io.connect('http://reactchess-jeffreyxiao.rhcloud.com:8000/', {'forceNew': true});
+	script(type="text/javascript" src="../dist/index_bundle.js")
